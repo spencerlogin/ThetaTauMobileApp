@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const Brother = (props) => {
+  const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={() => {navigation.navigate('BrotherPage')}}>
       <View style={styles.column}>
         <Image source={"../images/elise.png"} style={styles.icon} />
       </View>
@@ -13,7 +14,7 @@ const Brother = (props) => {
         <Text style={styles.text}>{props.title}</Text>
         <Text style={styles.text}>{props.name}</Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
@@ -24,6 +25,7 @@ const styles = StyleSheet.create({
       justifyContent: 'space-between', 
       alignItems: 'center', 
       padding: 10,
+      marginBottom: 10,
     },
     text: {
         color: '#E29900',

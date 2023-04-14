@@ -2,13 +2,14 @@ import React from 'react';
 import { View, StyleSheet, Text, SafeAreaView, Dimensions } from 'react-native';
 import Navbar from "../components/navbar"
 import Brother from "../components/brother"
+import Extra from "../components/extra"
 
 const Calender = () => {
 
   return (
     <SafeAreaView>
         <Text style={styles.title}>Spring 2023</Text>
-        
+    <Extra />
     <Navbar />
     </SafeAreaView>
   );

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, SafeAreaView, Dimensions, TouchableOpacity, ScrollView} from "react-native";
 import React, { useState, useCallback } from "react";
 import Navbar from "../components/navbar";
-
+import Extra from "../components/extra"
 
 const Homepage = ({ navigation }) => {
   const [isDropped1, setIsDropped1] = useState(false);
@@ -107,6 +107,7 @@ const Homepage = ({ navigation }) => {
               <Text style={styles.dropdownText}>Professionalism, Brotherhood, Community Service</Text>
             </View>
           )}
+      <Extra />
       </ScrollView>
       <Navbar />
     </View>

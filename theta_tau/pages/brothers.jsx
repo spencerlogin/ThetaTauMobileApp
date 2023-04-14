@@ -1,17 +1,32 @@
 import React from 'react';
-import { View, StyleSheet, Text, SafeAreaView, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, SafeAreaView, Dimensions, ScrollView } from 'react-native';
 import Navbar from "../components/navbar"
 import Brother from "../components/brother"
+import Extra from "../components/extra"
 
 const Brothers = () => {
 
   return (
-    <SafeAreaView>
-        <Text style={styles.title}>E-BOARD</Text>
-        <Brother name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
-        
-    <Navbar />
-    </SafeAreaView>
+    <View style={styles.outside}>
+      <SafeAreaView>
+        <ScrollView>
+          <Text style={styles.title}>E-BOARD</Text>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          
+          <Extra />
+        </ScrollView>
+      </SafeAreaView>
+      <Navbar />
+    </View>
   );
 };
 
@@ -25,7 +40,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingVertical: 20,
     width: Dimensions.get('window').width,
-  }
+  },
 });
 
 export default Brothers;
