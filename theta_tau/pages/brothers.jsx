@@ -12,11 +12,13 @@ const Brothers = () => {
         <ScrollView>
           <Text style={styles.title}>E-BOARD</Text>
           <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
-          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
-          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
-          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
-          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
-          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Daniel Klein" title="Vice Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Marissa Gamabonte" title="Corressponding Secretary" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Yuanjie Xu" title="Treasurer" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Hao Zhu" title="Scribe" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Manvir Singh" title="Pledge Marshal" image="../assets/elise.png"/>
+
+          <Text style={styles.title}>ACTIVE BROTHERS</Text>
           <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
           <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
           <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
