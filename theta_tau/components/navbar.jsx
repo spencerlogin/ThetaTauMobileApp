@@ -30,6 +30,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 60,
     width: Dimensions.get('window').width,
+    position: 'absolute',
+    bottom: 0
   },
   icon: {
     marginHorizontal: 38,

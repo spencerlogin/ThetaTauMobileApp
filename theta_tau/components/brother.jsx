@@ -8,7 +8,7 @@ const Brother = (props) => {
   return (
     <Pressable style={styles.container} onPress={() => {navigation.navigate('BrotherPage')}}>
       <View style={styles.column}>
-        <Image source={"../images/elise.png"} style={styles.icon} />
+        <Image source={props.imageSource} style={styles.icon} />
       </View>
       <View style={styles.column}>
         <Text style={styles.text}>{props.title}</Text>

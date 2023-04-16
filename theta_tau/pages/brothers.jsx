@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, SafeAreaView, Dimensions, ScrollView } from 're
 import Navbar from "../components/navbar"
 import Brother from "../components/brother"
 import Extra from "../components/extra"
+import elise from '../assets/elise.png';
 
 const Brothers = () => {
 
@@ -11,7 +12,7 @@ const Brothers = () => {
       <SafeAreaView>
         <ScrollView>
           <Text style={styles.title}>E-BOARD</Text>
-          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image="../assets/elise.png"/>
+          <Brother style={styles.brother} name="Elise Dougherty" title="Regent" image={elise} />
           <Brother style={styles.brother} name="Daniel Klein" title="Vice Regent" image="../assets/elise.png"/>
           <Brother style={styles.brother} name="Marissa Gamabonte" title="Corressponding Secretary" image="../assets/elise.png"/>
           <Brother style={styles.brother} name="Yuanjie Xu" title="Treasurer" image="../assets/elise.png"/>
@@ -49,12 +50,11 @@ const Brothers = () => {
           <Brother style={styles.brother} name="Hao Zhu" title="" image="../assets/elise.png"/>
           <Brother style={styles.brother} name="Jenny Zhu" title="" image="../assets/elise.png"/>
 
-
           
           <Extra />
         </ScrollView>
+        <Navbar />
       </SafeAreaView>
-      <Navbar />
     </View>
   );
 };
