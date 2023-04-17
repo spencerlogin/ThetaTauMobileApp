@@ -8,11 +8,7 @@ const Brother = (props) => {
   return (
     <Pressable style={styles.container} onPress={() => {navigation.navigate('BrotherPage')}}>
       <View style={styles.column}>
-        <Image source= {props.imageSource} style={styles.icon} />
-      </View>
-      <View style={styles.column}>
-        <Text style={styles.text}>{props.title}</Text>
-        <Text style={styles.text}>{props.name}</Text>
+        <Text style={styles.text}>Hello</Text>
       </View>
     </Pressable>
   );
@@ -35,12 +31,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       flex: 1, 
       marginHorizontal: 5,
-      
-    },
-    icon: {
-        width: 80,
-        height: 80,  
-    },
+    }
   });
 
 export default Brother;

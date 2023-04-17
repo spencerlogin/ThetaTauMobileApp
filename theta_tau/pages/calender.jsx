@@ -1,17 +1,22 @@
 import React from 'react';
-import { View, StyleSheet, Text, SafeAreaView, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, SafeAreaView, Dimensions, ScrollView } from 'react-native';
 import Navbar from "../components/navbar"
 import Brother from "../components/brother"
 import Extra from "../components/extra"
+import Event from "../components/events"
 
 const Calender = () => {
-
   return (
-    <SafeAreaView>
-        <Text style={styles.title}>Spring 2023</Text>
-    <Extra />
-    <Navbar />
-    </SafeAreaView>
+    <View>
+      <Text style={styles.title}></Text>
+      <SafeAreaView>
+        <ScrollView>
+            <Text style={styles.title}>Spring 2023</Text>
+          <Extra />
+          <Navbar />
+        </ScrollView>
+      </SafeAreaView>
+    </View>
   );
 };
 
@@ -21,9 +26,8 @@ const styles = StyleSheet.create({
     color: '#710000',
     backgroundColor: '#E29900',
     fontWeight: 'bold',
-    fontSize: 20, 
+    fontSize: 30, 
     textAlign: 'center',
-    paddingVertical: 20,
     width: Dimensions.get('window').width,
   }
 });
