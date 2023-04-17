@@ -4,7 +4,6 @@ import Navbar from "../components/navbar"
 import Brother from "../components/brother"
 import Extra from "../components/extra"
 import elise from '../assets/elise.png';
-
 const Brothers = () => {
 
   return (
