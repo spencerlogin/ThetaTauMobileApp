@@ -27,7 +27,7 @@ const Brothers = () => {
             <Brother style={styles.brother} name="Del Hart" title=""  imageSource = {require('../assets/del_hart.png')} />
             <Brother style={styles.brother} name="Matthew Amato" title=""  imageSource = {require('../assets/matthew_amato.png')} />
             <Brother style={styles.brother} name="Dennis Cetaj" title=""  imageSource = {require('../assets/dennis_cetaj.png')} />
-            <Brother style={styles.brother} name="Kelly Chan" title="."  imageSource = {require('../assets/kelly_chan.png')} />
+            <Brother style={styles.brother} name="Kelly Chan" title=""  imageSource = {require('../assets/kelly_chan.png')} />
             <Brother style={styles.brother} name="Edward Masalimov" title=""  imageSource = {require('../assets/edward.png')} />
             <Brother style={styles.brother} name="Tenzin Pema" title=""  imageSource = {require('../assets/tenzin_pema.png')} />
             <Brother style={styles.brother} name="Chloe Tullius" title=""  imageSource = {require('../assets/chloe_tullius.png')} />
