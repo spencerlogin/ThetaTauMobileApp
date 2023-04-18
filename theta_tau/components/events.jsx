@@ -7,13 +7,13 @@ const Brother = (props) => {
 
   // Placeholder image sources
   const placeholderImages = [
-    require('./IMG_7473.jpg'),
-    require('./IMG_7472.jpg'),
-    require('./IMG_7471.jpg'),
-    require('./IMG_7470.jpg'),
-    require('./IMG_7469.jpg'),
-    require('./IMG_7467.jpg'),
-    require('./IMG_7468.jpg'),
+    // require('./IMG_7473.jpg'),
+    // require('./IMG_7472.jpg'),
+    // require('./IMG_7471.jpg'),
+    // require('./IMG_7470.jpg'),
+    // require('./IMG_7469.jpg'),
+    // require('./IMG_7467.jpg'),
+    // require('./IMG_7468.jpg'),
   ];
 
   return (
