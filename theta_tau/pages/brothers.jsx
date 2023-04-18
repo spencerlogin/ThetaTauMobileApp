@@ -22,7 +22,7 @@ const Brothers = () => {
             <Text style={styles.title}>ACTIVE BROTHERS</Text>
             <Brother style={styles.brother} name="David Huang" title=""  imageSource = {require('../assets/david_huang.png')} />
             <Brother style={styles.brother} name="Felix Bermudez" title=""  imageSource = {require('../assets/manvir.png')} />
-            <Brother style={styles.brother} name="David Zaretsky" title=""  imageSource = {require('../assets/David Zaretsky.png')} />
+            <Brother style={styles.brother} name="David Zaretsky" title=""  imageSource = {require('../assets/eliseD.png')} />
             <Brother style={styles.brother} name="Billy Grippi" title=""  imageSource = {require('../assets/billy_grippi.png')} />
             <Brother style={styles.brother} name="Max Gustin" title=""  imageSource = {require('../assets/max_gustin.png')} />
             <Brother style={styles.brother} name="Del Hart" title=""  imageSource = {require('../assets/del_hart.png')} />

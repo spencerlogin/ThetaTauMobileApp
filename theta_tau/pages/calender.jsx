@@ -1,35 +1,64 @@
 import React from 'react';
-import { View, StyleSheet, Text, SafeAreaView, Dimensions, ScrollView } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Navbar from "../components/navbar"
-import Brother from "../components/brother"
-import Extra from "../components/extra"
-import Event from "../components/events"
 
-const Calender = () => {
+
+const Brother = (props) => {
+  const navigation = useNavigation();
+
+  // Image sources
+  const placeholderImages = [
+    require('../assets/IMG_7473.png'), //info session
+    require('../assets/rush.png.png'),
+    require('../assets/rush2.png.png'),
+    require('../assets/rush3.png.png'),
+    require('../assets/IMG_7472.png'), //info session II
+    require('../assets/IMG_7471.png'), // game night
+    require('../assets/IMG_7470.png'), // meet the brothers
+    require('../assets/IMG_7469.png'), // pizza night
+    require('../assets/IMG_7467.png'), // paint night
+    require('../assets/IMG_7468.png'), // DIY BRACELETS
+    
+  ];
+
   return (
-    <View>
-      <Text style={styles.title}></Text>
-      <SafeAreaView>
-        <ScrollView>
-            <Text style={styles.title}>Spring 2023</Text>
-          <Extra />
-          <Navbar />
-        </ScrollView>
-      </SafeAreaView>
+    <View style={styles.container}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        {/* Render placeholder images */}
+        {placeholderImages.map((source, index) => (
+          <Image key={index} source={source} style={styles.image} />
+        ))}
+      </ScrollView>
+      <Pressable onPress={() => navigation.navigate('BrotherPage')} style={styles.button}>
+        <Text style={styles.buttonText}>RUSH EVENTS</Text>
+      </Pressable>
+      <Navbar />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  title: {
-    height: 50,
-    color: '#710000',
+  container: {
+    backgroundColor: '#710000',
+    padding: 10,
+    marginBottom: 10,
+  },
+  image: {
+    width: 100,
+    height: 100,
+    marginHorizontal: 5,
+  },
+  button: {
     backgroundColor: '#E29900',
-    fontWeight: 'bold',
-    fontSize: 30, 
-    textAlign: 'center',
-    width: Dimensions.get('window').width,
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    marginTop: 10,
+  },
+  buttonText: {
+    color: '#FFF',
+  },
 });
 
-export default Calender;
+export default Brother;
