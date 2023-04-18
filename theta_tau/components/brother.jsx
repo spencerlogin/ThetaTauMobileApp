@@ -20,7 +20,7 @@ const Brother = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#710000',
+      backgroundColor: '#B99B73',
       flexDirection: 'row', 
       justifyContent: 'space-between', 
       alignItems: 'center', 
@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
       marginBottom: 10,
     },
     text: {
-        color: '#E29900',
+        color: '#FFFFFF',
+        fontSize: 15
     },
     column: {
       justifyContent: 'center', 

@@ -22,7 +22,7 @@ const BrotherPage = () => {
 
 const styles = StyleSheet.create({
   topRow: {
-    backgroundColor: '#710000',
+    backgroundColor: '#B99B73',
     paddingVertical: 20,
   },
   back: {

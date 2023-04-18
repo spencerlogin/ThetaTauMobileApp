@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text, SafeAreaView, Dimensions, ScrollView } from 'react-native';
+import { View, StyleSheet, Text, SafeAreaView, Dimensions, ScrollView, Image } from 'react-native';
 import Navbar from "../components/navbar"
 import Brother from "../components/brother"
 import Extra from "../components/extra"
@@ -11,6 +11,7 @@ const Brothers = () => {
         <Text style={styles.title}></Text>
         <SafeAreaView>
             <Text style={styles.title}>E-BOARD</Text>
+            <Image style={styles.logo} source={require('../assets/theta_tau_coa.png')} />
             <Brother style={styles.brother} name="Elise Dougherty" title="Regent" imageSource = {require('../assets/eliseD.png')} />
             <Brother style={styles.brother} name="Daniel Klein" title="Vice Regent" imageSource ={require('../assets/daniel_klein.png')}/>
             <Brother style={styles.brother} name="Marissa Gabbamonte" title="Corressponding Secretary" imageSource ={require("../assets/Marissa_Gabbamonte.jpeg")}/>
@@ -47,13 +48,14 @@ const Brothers = () => {
             <Brother style={styles.brother} name="Isabella Nguyen" title=""  imageSource = {require('../assets/bella.png')} />
             <Brother style={styles.brother} name="Rrucha Singh" title=""  imageSource = {require('../assets/manvir.png')} />
             <Brother style={styles.brother} name="Jenny Zhu" title=""  imageSource = {require('../assets/jenny.png')} />
-
             
-            <Extra />
-          <Navbar />
+
+    
         </SafeAreaView>
+        <Navbar />
       </View>
     </ScrollView>
+    
 
   );
 };
@@ -61,13 +63,30 @@ const Brothers = () => {
 const styles = StyleSheet.create({
   title: {
     height: 50,
-    color: '#710000',
-    backgroundColor: '#E29900',
+    color: '#FFFFFF',
+    backgroundColor: '#501315', 
     fontWeight: 'bold',
     fontSize: 30, 
     textAlign: 'center',
     width: Dimensions.get('window').width,
-  }
+  },
+  logo: {
+    width: 25,
+    height: 41,
+    position: 'absolute',
+    right: 20,
+  },
+  rectangle: {
+    height: 2,
+    width: 200,
+    backgroundColor: 'green',
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  
 });
 
 export default Brothers;

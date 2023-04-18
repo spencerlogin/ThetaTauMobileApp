@@ -9,13 +9,13 @@ const Navbar = () => {
   return (
       <View style={styles.navbar}>
           <Pressable style={styles.button} onPress={() => {navigation.navigate('Homepage')}}>
-              <Image source={require('../assets/house-icon.webp')} style={styles.icon} />
+              <Image source={require('../assets/white_homePage.png')} style={styles.icon} />
           </Pressable>
           <Pressable style={styles.button} onPress={() => {navigation.navigate('Brothers')}}>
-              <Image source={require('../assets/people-icon.png')} style={styles.icon} />
+              <Image source={require('../assets/Brothers_Tab.png')} style={styles.icon} />
           </Pressable>
           <Pressable style={styles.button} onPress={() => {navigation.navigate('Calender')}}>
-              <Image source={require('../assets/calender-icon.png')} style={styles.icon} />
+              <Image source={require('../assets/rushIcon.png')} style={styles.icon} />
           </Pressable>
       </View>
   );
@@ -30,8 +30,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 60,
     width: Dimensions.get('window').width,
-    position: 'absolute',
-    bottom: 0
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 5
+  
   },
   icon: {
     marginHorizontal: 38,
