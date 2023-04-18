@@ -5,15 +5,19 @@ import { useNavigation } from '@react-navigation/native';
 const Brother = (props) => {
   const navigation = useNavigation();
 
-  // Placeholder image sources
+  // Image sources
   const placeholderImages = [
-    // require('./IMG_7473.jpg'),
-    // require('./IMG_7472.jpg'),
-    // require('./IMG_7471.jpg'),
-    // require('./IMG_7470.jpg'),
-    // require('./IMG_7469.jpg'),
-    // require('./IMG_7467.jpg'),
-    // require('./IMG_7468.jpg'),
+    require('./IMG_7473.png'), //info session
+    require('./rush.png.png'),
+    require('/rush2.png.png'),
+    require('/rush3.png.png'),
+    require('./IMG_7472.png'), //info session II
+    require('./IMG_7471.png'), // game night
+    require('./IMG_7470.png'), // meet the brothers
+    require('./IMG_7469.png'), // pizza night
+    require('./IMG_7467.png'), // paint night
+    require('./IMG_7468.png'), // DIY BRACELETS
+    
   ];
 
   return (
