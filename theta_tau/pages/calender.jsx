@@ -10,13 +10,13 @@ const Brother = (props) => {
 
   // Image sources
   const placeholderImages = [
-    require('../assets/IMG_7473.png'), //info session
-    require('../assets/IMG_7472.png'), //info session II
-    require('../assets/IMG_7471.png'), // game night
-    require('../assets/IMG_7470.png'), // meet the brothers
-    require('../assets/IMG_7469.png'), // pizza night
-    require('../assets/IMG_7467.png'), // paint night
-    require('../assets/IMG_7468.png'), // DIY BRACELETS
+    require('../assets/infoSess1.png'), //info session
+    require('../assets/infoSess2.png'), //info session II
+    require('../assets/gameNight.png'), // game night
+    require('../assets/meetTheBro.png'), // meet the brothers
+    require('../assets/pizzaNight.png'), // pizza night
+    require('../assets/paintNight.png'), // paint night
+    require('../assets/bracelet.png'), // DIY BRACELETS
     
   ];
 
@@ -36,6 +36,7 @@ const Brother = (props) => {
       <Extra />
       <Navbar />
     </ScrollView>
+    
   );
 };
 
