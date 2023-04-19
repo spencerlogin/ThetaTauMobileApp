@@ -6,7 +6,7 @@ import Extra from "../components/extra"
 const Brothers = () => {
 
   return (
-    <ScrollView>
+      <ScrollView>
       <View style={styles.outside}>
         <Text style={styles.title}></Text>
         <SafeAreaView>
@@ -77,6 +77,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 20,
   },
+  scrollView: {
+    marginBottom: 10, // leave space for the navbar
+  },
   rectangle: {
     height: 2,
     width: 200,
@@ -87,7 +90,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  
+  navbar: {
+    position: 'absolute',
+    bottom: 0,
+  }
 });
 
 export default Brothers;

@@ -48,21 +48,21 @@ const styles = StyleSheet.create({
     marginBottom: 10, // leave space for the navbar
   },
   title: {
-    marginTop: 50,
+    height: 100,
     color: '#FFFFFF',
     fontWeight: 'bold',
     fontSize: 30, 
     textAlign: 'center',
     width: Dimensions.get('window').width,
     backgroundColor: '#501315',
-    padding: 20
+    padding: 50
   },
   logo: {
     width: 30,
     height: 50,
     position: 'absolute',
     right: 20,
-    marginTop: 60,
+    marginTop: 40,
   },
   navbar: {
     position: 'absolute',
