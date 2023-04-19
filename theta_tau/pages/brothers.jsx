@@ -21,8 +21,8 @@ const Brothers = () => {
 
             <Text style={styles.title}>ACTIVE BROTHERS</Text>
             <Brother style={styles.brother} name="David Huang" title=""  imageSource = {require('../assets/david_huang.png')} />
-            <Brother style={styles.brother} name="Felix Bermudez" title=""  imageSource = {require('../assets/manvir.png')} />
-            <Brother style={styles.brother} name="David Zaretsky" title=""  imageSource = {require('../assets/eliseD.png')} />
+            <Brother style={styles.brother} name="Felix Bermudez" title=""  imageSource = {require('../assets/felix_berm.png')} />
+            <Brother style={styles.brother} name="David Zaretsky" title=""  imageSource = {require('../assets/david.png')} />
             <Brother style={styles.brother} name="Billy Grippi" title=""  imageSource = {require('../assets/billy_grippi.png')} />
             <Brother style={styles.brother} name="Max Gustin" title=""  imageSource = {require('../assets/max_gustin.png')} />
             <Brother style={styles.brother} name="Del Hart" title=""  imageSource = {require('../assets/del_hart.png')} />
@@ -33,24 +33,25 @@ const Brothers = () => {
             <Brother style={styles.brother} name="Tenzin Pema" title=""  imageSource = {require('../assets/tenzin_pema.png')} />
             <Brother style={styles.brother} name="Chloe Tullius" title=""  imageSource = {require('../assets/chloe_tullius.png')} />
             <Brother style={styles.brother} name="Gabriel Thornton" title=""  imageSource = {require('../assets/gabriel.png')} />
-            <Brother style={styles.brother} name="James Fattorusso" title=""  imageSource = {require('../assets/manvir.png')} />
+            <Brother style={styles.brother} name="James Fattorusso" title=""  imageSource = {require('../assets/jimmy.png')} />
             <Brother style={styles.brother} name="Jeffrey Kou" title=""  imageSource = {require('../assets/jeffrey_kou.png')} />
-            <Brother style={styles.brother} name="Andrew Li" title=""  imageSource = {require('../assets/Andrew Li.png')} />
+            <Brother style={styles.brother} name="Andrew Li" title=""  imageSource = {require('../assets/andrew_li.png')} />
             <Brother style={styles.brother} name="Victor Lin" title=""  imageSource = {require('../assets/victor.png')} />
-            <Brother style={styles.brother} name="Myles Pauquette" title=""  imageSource = {require('../assets/manvir.png')} />
+            <Brother style={styles.brother} name="Myles Pauquette" title=""  imageSource = {require('../assets/myles.png')} />
             <Brother style={styles.brother} name="Juan Quintero" title=""  imageSource = {require('../assets/juan.png')} />
             <Brother style={styles.brother} name="Adrian Sin" title=""  imageSource = {require('../assets/adrian_sin.png')} />
-            <Brother style={styles.brother} name="Justin Siwa" title=""  imageSource = {require('../assets/manvir.png')} />
-            <Brother style={styles.brother} name="Alex Yevzerov" title=""  imageSource = {require('../assets/manvir.png')} />
+            <Brother style={styles.brother} name="Justin Siwa" title=""  imageSource = {require('../assets/justin_siwa.png')} />
+            <Brother style={styles.brother} name="Alex Yevzerov" title=""  imageSource = {require('../assets/alex_yev.png')} />
             <Brother style={styles.brother} name="Zachary Clark" title=""  imageSource = {require('../assets/zachary.png')} />
+            <Brother style={styles.brother} name="Lydia Cenac" title=""  imageSource = {require('../assets/lydia.png')} />
             <Brother style={styles.brother} name="James Henry" title=""  imageSource = {require('../assets/jph.png')} />
             <Brother style={styles.brother} name="Anna Kane" title=""  imageSource = {require('../assets/anna_kane.png')} />
             <Brother style={styles.brother} name="Isabella Nguyen" title=""  imageSource = {require('../assets/bella.png')} />
-            <Brother style={styles.brother} name="Rrucha Singh" title=""  imageSource = {require('../assets/manvir.png')} />
+            <Brother style={styles.brother} name="Rrucha Singh" title=""  imageSource = {require('../assets/rrucha_singh.png')} />
             <Brother style={styles.brother} name="Jenny Zhu" title=""  imageSource = {require('../assets/jenny.png')} />
             
 
-    
+            <Extra />
         </SafeAreaView>
         <Navbar />
       </View>
