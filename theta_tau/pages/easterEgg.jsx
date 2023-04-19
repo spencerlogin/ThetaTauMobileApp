@@ -7,8 +7,9 @@ const Extra = () => {
   //Test
   return (
     <SafeAreaView>
-        <Text>Hello</Text>
-        <Image source={require('../assets/jenny.png')} />
+        <Text style={{fontSize: 50}}>Mathew Yeung was here</Text>        
+        <Text style={{fontSize: 10}}>and Muhtasim</Text>
+        <Image style={{width: 400, height: 400}} source={require('../assets/mat.png')} />
     </SafeAreaView>
   );
 };
