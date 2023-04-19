@@ -18,39 +18,41 @@ const BrotherPage = ({ route }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
-      <View style={styles.brothersRow}>
-        <Pressable onPress={() => {navigation.navigate('Brothers')}}><Text style={styles.back}>Back</Text></Pressable>
-        <Text style={styles.title}>BROTHERS</Text>
-      </View>
-      <SafeAreaView contentContainerStyle={styles.scrollContent}>
-        <View style={styles.topRow}>
-          <Text style={{color: 'white', fontWeight: 'bold', fontSize: 25,}}>{name}</Text>
-          <Text style={{color: 'white', fontSize: 18, marginTop: 7}}>{title}</Text>
+        <View style={styles.brothersRow}>
+          <Pressable onPress={() => {navigation.navigate('Brothers')}}><Text style={styles.back}>Back</Text></Pressable>
+          <Text style={styles.title}>BROTHERS</Text>
         </View>
-        <Image style={{width: "100%", height: 400}} source={image}></Image>
-        
-        <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
-          <View style={{flex: 1, height: 2, backgroundColor: '#501315'}} />
-            <View style={{alignItems: 'center', width: '50%', backgroundColor: '#501315', marginBottom: 10}}>
-              <Text style={{color: 'white', fontSize: 20, paddingVertical: 5}}>Bio</Text>
-            </View>
-          <View style={{flex: 1, height: 2, backgroundColor: '#501315'}} />
-        </View>
+        <SafeAreaView contentContainerStyle={styles.scrollContent}>
+          <View style={styles.topRow}>
+            <Text style={{color: 'white', fontWeight: 'bold', fontSize: 25,}}>{name}</Text>
+            <Text style={{color: 'white', fontSize: 18, marginTop: 7}}>{title}</Text>
+          </View>
+          <Image style={{width: "100%", height: 400}} source={image}></Image>
 
-        <Text style={{marginHorizontal: 5, fontSize: 15}}>{bio}</Text>
+          <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
+            <View style={{flex: 1, height: 2, backgroundColor: '#501315'}} />
+              <View style={{alignItems: 'center', width: '50%', backgroundColor: '#501315', marginBottom: 10}}>
+                <Text style={{color: 'white', fontSize: 20, paddingVertical: 5}}>Bio</Text>
+              </View>
+            <View style={{flex: 1, height: 2, backgroundColor: '#501315'}} />
+          </View>
 
-        <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
-          <View style={{flex: 1, height: 2, backgroundColor: '#501315'}} />
-            <View style={{alignItems: 'center', width: '50%', backgroundColor: '#501315', marginBottom: 10}}>
-              <Text style={{color: 'white', fontSize: 20, paddingVertical: 5}}>Socials</Text>
-            </View>
-          <View style={{flex: 1, height: 2, backgroundColor: '#501315'}} />
-        </View>
-        <A style={{marginLeft: 40, marginTop: 20}} href={linkedin}><Image style={{height: 65, width: 65}} source={require('../assets/linkedin_logo.png')}></Image></A>
-        <Extra />
-        <Navbar />
-      </SafeAreaView>
+          <Text style={{marginHorizontal: 5, fontSize: 15}}>{bio}</Text>
+
+          <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
+            <View style={{flex: 1, height: 2, backgroundColor: '#501315'}} />
+              <View style={{alignItems: 'center', width: '50%', backgroundColor: '#501315', marginBottom: 10}}>
+                <Text style={{color: 'white', fontSize: 20, paddingVertical: 5}}>Socials</Text>
+              </View>
+            <View style={{flex: 1, height: 2, backgroundColor: '#501315'}} />
+          </View>
+          <A style={{marginLeft: 40, marginTop: 20}} href={linkedin}><Image style={{height: 65, width: 65}} source={require('../assets/linkedin_logo.png')}></Image></A>
+          <Extra />
+        </SafeAreaView>
       </ScrollView>
+      <View style={styles.navbarContainer}>
+        <Navbar />
+      </View>
     </View>
   );
 };
@@ -59,11 +61,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
-  },  
+  },
   brothersRow: {
     backgroundColor: '#501315', 
     textAlign: 'center',
     flexDirection: 'row',
+
     flexWrap:'wrap',
   },
   back: {
