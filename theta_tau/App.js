@@ -4,12 +4,16 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Homepage from "./pages/homepage.jsx";
 import Brothers from "./pages/brothers.jsx";
 import Calender from "./pages/calender.jsx";
-import brotherPage from "./pages/brotherPage.jsx";
+import BrotherPage from "./pages/brotherPage.jsx";
+import Pillars from "./pages/pillars.jsx";
+import EasterEgg from "./pages/easterEgg.jsx";
+
 
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function App() 
+{
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -20,7 +24,9 @@ export default function App() {
         <Stack.Screen name="Homepage" component={Homepage} />
         <Stack.Screen name="Brothers" component={Brothers} />
         <Stack.Screen name="Calender" component={Calender} />
-        <Stack.Screen name="BrotherPage" component={brotherPage} />
+        <Stack.Screen name="BrotherPage" component={BrotherPage} />
+        <Stack.Screen name="Pillars" component={Pillars}/>
+        <Stack.Screen name="EasterEgg" component={EasterEgg} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View, Image, SafeAreaView, Dimensions, TouchableOpacity, ScrollView} from "react-native";
+import { StyleSheet, Text, View, Image, Pressable, Dimensions, TouchableOpacity, ScrollView} from "react-native";
 import React, { useState, useCallback } from "react";
 import Navbar from "../components/navbar";
 import Extra from "../components/extra"
+import { useNavigation } from '@react-navigation/native';
 
-const Homepage = ({ navigation }) => {
+const Homepage = () => {
   const [isDropped1, setIsDropped1] = useState(false);
   const [isDropped2, setIsDropped2] = useState(false);
   const [isDropped3, setIsDropped3] = useState(false);
   const [isDropped4, setIsDropped4] = useState(false);
+  const navigation = useNavigation();
 
 
   const handleArrowPress1 = () => {
@@ -25,6 +27,7 @@ const Homepage = ({ navigation }) => {
 
   return (
     <View style={styles.container} >
+    <Pressable onPress={() => {navigation.navigate('EasterEgg')}}><Text style={{color: '#f2f2f2'}}>Easter</Text></Pressable>
       <Image
         style={styles.image}
         source={require("../assets/theta_tau_coa.png")}
@@ -118,7 +121,6 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 40,
     flex: 1,
-    backgroundColor: "#ffffff",
     alignItems: "center",
   },
   title: {

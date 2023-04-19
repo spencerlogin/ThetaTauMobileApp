@@ -17,6 +17,9 @@ const Navbar = () => {
           <Pressable style={styles.button} onPress={() => {navigation.navigate('Calender')}}>
               <Image source={require('../assets/rushIcon.png')} style={styles.icon} />
           </Pressable>
+          <Pressable style={styles.button} onPress={() => {navigation.navigate('Pillars')}}>
+              <Image source={require('../assets/pillars.png')} style={styles.icon} />
+          </Pressable>
       </View>
   );
 };
