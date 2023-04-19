@@ -6,8 +6,8 @@ import Extra from "../components/extra"
 const Brothers = () => {
 
   return (
-      <ScrollView>
-      <View style={styles.outside}>
+    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.scrollContent}>
         <Text style={styles.title}></Text>
         <SafeAreaView>
             <Text style={styles.title}>E-BOARD</Text>
@@ -53,15 +53,24 @@ const Brothers = () => {
 
             <Extra />
         </SafeAreaView>
-        <Navbar />
-      </View>
-    </ScrollView>
+        </ScrollView>
+      <Navbar />
+    </View>
     
 
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      backgroundColor: '#FFFFFF',
+    },
+    scrollContent: {
+      flexGrow: 1,
+      paddingBottom: 80, // set a paddingBottom value greater than the navbar height
+      marginBottom: 10
+    },
   title: {
     height: 50,
     color: '#FFFFFF',
