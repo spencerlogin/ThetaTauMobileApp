@@ -5,6 +5,7 @@ import Navbar from "../components/navbar"
 import Extra from "../components/extra"
 import Event from "../components/event"
 import Data from "../data/data.json"
+
 const Brother = (props) => {
   const navigation = useNavigation();
 
@@ -17,36 +18,34 @@ const Brother = (props) => {
     require('../assets/pizzaNight.png'), // pizza night
     require('../assets/paintNight.png'), // paint night
     require('../assets/bracelet.png'), // DIY BRACELETS
-    
   ];
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
+    <View style={styles.container}>
+      <ScrollView style={styles.scrollView}>
         <Text style={styles.title}>RUSH EVENTS</Text>
         <Image style={styles.logo} source={require('../assets/theta_tau_coa.png')} />
-      </View>
-      <Event desc={Data.eventData[0].description} title="Info Session 1" imageSource = {placeholderImages[0]} />
-      <Event desc={Data.eventData[1].description} title="Info Session 2" imageSource = {placeholderImages[1]} />
-      <Event desc={Data.eventData[2].description} title="Game Night" imageSource = {placeholderImages[2]} />
-      <Event desc={Data.eventData[3].description} title="Meet The Brothers" imageSource = {placeholderImages[3]} />
-      <Event desc={Data.eventData[4].description} title="Pizza Night" imageSource = {placeholderImages[4]} />
-      <Event desc={Data.eventData[5].description} title="Paint Night" imageSource = {placeholderImages[5]} />
-      <Event desc={Data.eventData[6].description} title="D.I.Y. Bracelets" imageSource = {placeholderImages[6]} />
-      <Extra />
-      <Navbar />
-    </ScrollView>
-    
+        <Event desc={Data.eventData[0].description} title="Info Session 1" imageSource = {placeholderImages[0]} />
+        <Event desc={Data.eventData[1].description} title="Info Session 2" imageSource = {placeholderImages[1]} />
+        <Event desc={Data.eventData[2].description} title="Game Night" imageSource = {placeholderImages[2]} />
+        <Event desc={Data.eventData[3].description} title="Meet The Brothers" imageSource = {placeholderImages[3]} />
+        <Event desc={Data.eventData[4].description} title="Pizza Night" imageSource = {placeholderImages[4]} />
+        <Event desc={Data.eventData[5].description} title="Paint Night" imageSource = {placeholderImages[5]} />
+        <Event desc={Data.eventData[6].description} title="D.I.Y. Bracelets" imageSource = {placeholderImages[6]} />
+        <Extra />
+      </ScrollView>
+      <Navbar style={styles.navbar} />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#501315',
-    padding: 10,
+    flex: 1,
+    backgroundColor: '#FFFFFF',
   },
-  safeContainer: {
-    margin: 0,
+  scrollView: {
+    marginBottom: 10, // leave space for the navbar
   },
   title: {
     marginTop: 50,
@@ -55,23 +54,20 @@ const styles = StyleSheet.create({
     fontSize: 30, 
     textAlign: 'center',
     width: Dimensions.get('window').width,
-  },
-  image: {
-    width: 200,
-    height: 200,
-  },
-  row: {
-    width: '100%',
-    marginTop: 10, 
-    alignItems: 'center',
+    backgroundColor: '#501315',
+    padding: 20
   },
   logo: {
-    width: 25,
-    height: 41,
+    width: 30,
+    height: 50,
     position: 'absolute',
     right: 20,
-    marginTop: 50,
-  }
+    marginTop: 60,
+  },
+  navbar: {
+    position: 'absolute',
+    bottom: 0,
+  },
 });
 
 export default Brother;

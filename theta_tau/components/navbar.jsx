@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   
   },
   icon: {
-    marginHorizontal: 38,
+    marginHorizontal: 33,
     width: 40,
     height: 40,  
   },

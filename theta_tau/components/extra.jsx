@@ -7,7 +7,6 @@ const Extra = () => {
 
   return (
     <View style={{height: 100}}>
-
     </View>
   );
 };
