@@ -21,9 +21,6 @@ const Homepage = () => {
   const handleArrowPress3 = () => {
     setIsDropped3(!isDropped3)
   };
-  const handleArrowPress4 = () => {
-    setIsDropped4(!isDropped4)
-  };
 
   return (
     <View style={styles.container} >
@@ -32,10 +29,13 @@ const Homepage = () => {
         style={styles.image}
         source={require("../assets/theta_tau_coa.png")}
       />
-      <Text style={{ fontSize: 40, color: "#710000" }}>
+      <Text style={{ fontSize: 40, color: "#501315" }}>
         Theta Tau
       </Text>
-      <Text style={{ fontSize: 20, color: "#710000" }}>
+      <Text style={{ fontSize: 25, color: "#501315" }}>
+        Mu Gamma Chapter
+      </Text>
+      <Text style={{ fontSize: 20, color: "#E29900" }}>
         Professional Engineering Fraternity
       </Text>
 
@@ -95,21 +95,6 @@ const Homepage = () => {
             </View>
           )}
       
-        <TouchableOpacity onPress={() => handleArrowPress4()}>
-          <View style={styles.dropdownRow}>
-            <View style={styles.dropdownRow2}>
-              <Text style={styles.aboutMe}>Pillars</Text>
-            </View>
-              <View style={{ paddingRight: 10}}>
-                {isDropped4 ? <Text>&#9650;</Text> : <Text>&#9660;</Text>}
-              </View>
-          </View>
-        </TouchableOpacity>
-          {isDropped4 && (
-            <View style={styles.dropdownContainer}>
-              <Text style={styles.dropdownText}>Professionalism, Brotherhood, Community Service</Text>
-            </View>
-          )}
       <Extra />
       </ScrollView>
       <Navbar />
@@ -147,7 +132,7 @@ const styles = StyleSheet.create({
     marginTop: 20, 
     fontSize: 20, 
     color: "#E29900", 
-    backgroundColor: "#710000",
+    backgroundColor: "#501315",
     textAlign: 'center',
   },
   aboutMe: { 
@@ -156,7 +141,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   dropdownRow: { 
-    backgroundColor: "#E29900",
+    backgroundColor: "#B99B73",
     marginTop: 30, 
     flexDirection: 'row', 
     alignItems: 'center', 
@@ -168,7 +153,7 @@ const styles = StyleSheet.create({
   },
   dropdownContainer: {
     paddingHorizontal: 10,
-    backgroundColor: "#710000",
+    backgroundColor: "#501315",
     width: '100%',
   },
   dropdownText: {

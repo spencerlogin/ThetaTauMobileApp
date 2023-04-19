@@ -6,7 +6,15 @@ const Brother = (props) => {
   const navigation = useNavigation();
 
   return (
-    <Pressable style={styles.container} onPress={() => {navigation.navigate('BrotherPage')}}>
+    <Pressable style={styles.container} onPress={() => {
+      navigation.navigate('BrotherPage', {
+        name: props.name,
+        title: props.title,
+        bio: props.bio,
+        image: props.imageSource,
+        linkedin: props.linkedin,
+      });
+    }}>
       <View style={styles.column}>
         <Image source= {props.imageSource} style={styles.icon} />
       </View>

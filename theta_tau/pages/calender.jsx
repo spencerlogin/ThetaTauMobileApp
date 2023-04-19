@@ -44,9 +44,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFFFFF',
   },
-  scrollView: {
-    marginBottom: 10, // leave space for the navbar
-  },
   title: {
     height: 100,
     color: '#FFFFFF',

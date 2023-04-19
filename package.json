@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@expo/html-elements": "^0.4.2",
     "expo-font": "~11.1.1",
     "expo-splash-screen": "~0.18.1"
   }
