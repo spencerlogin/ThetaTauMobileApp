@@ -59,7 +59,7 @@ const Homepage = () => {
         </TouchableOpacity>
           {isDropped1 && (
             <View style={styles.dropdownContainer}>
-              <Text style={styles.dropdownText}>Theta Tau is the oldest, largest, and foremost Fraternity for Engineers. Since its founding at the University of Minnesota in October 15, 1904.</Text>
+              <Text style={styles.dropdownText}>Theta Tau is the oldest, largest, and foremost Fraternity for Engineers. It was founded at the University of Minnesota in October 15, 1904.</Text>
             </View>
           )}
 
