@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, Image, Pressable, Dimensions, TouchableOpacity, ScrollView} from "react-native";
 import React, { useState, useCallback } from "react";
 import Navbar from "../components/navbar";
-import Extra from "../components/extra"
+import Extra from "../components/extra";
+import MeetingCodeButton from "../components/meetingCode";
 import { useNavigation } from '@react-navigation/native';
 
 const Homepage = () => {
@@ -94,6 +95,7 @@ const Homepage = () => {
               <Text style={styles.dropdownText}>“Whatsoever thy hand findeth to do, do it with thy might;...” ~Ecclesiastes 9:10</Text>
             </View>
           )}
+        <MeetingCodeButton/>
       
       <Extra />
       </ScrollView>

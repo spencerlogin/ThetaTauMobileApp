@@ -20,9 +20,6 @@ const Navbar = () => {
           <Pressable style={styles.button} onPress={() => {navigation.navigate('Pillars')}}>
               <Image source={require('../assets/pillars.png')} style={styles.icon} />
           </Pressable>
-          <Pressable style={styles.button} onPress={() => {navigation.navigate('Polls')}}>
-              <Image source={require('../assets/pillars.png')} style={styles.icon} />
-          </Pressable>
       </View>
   );
 };
