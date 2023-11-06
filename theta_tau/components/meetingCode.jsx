@@ -1,4 +1,4 @@
-import { StyleSheet, View} from "react-native";
+import { StyleSheet, View, Button, Text } from "react-native";
 import React, { useState } from "react";
 
 const MeetingCodeButton = () => {
@@ -11,12 +11,15 @@ const MeetingCodeButton = () => {
   return (
     <View style={styles.container} >
       {admin && 
+      <>
         <Button
           onPress={handleGenerateMeetingCode}
           title="Generate Meeting Code"
           color="#841584"
           accessibilityLabel="Button to Generate a Meeting Code"
         />
+        <Text>{meetingCode}</Text>
+      </>
       }
     </View>
   );
