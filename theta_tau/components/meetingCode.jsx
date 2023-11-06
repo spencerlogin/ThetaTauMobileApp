@@ -11,8 +11,9 @@ const MeetingCodeButton = props => {
   }
 
   const handleGenerateMeetingCode = () => {
-    setMeetingCode(generateMeetingCode());
-    // props.updatePollsCode(meetingCode);
+    const temp = generateMeetingCode();
+    setMeetingCode(temp);
+    props.updatePollsCode(temp);
   }
   // hardcode as true for testing until sign-in code is done
   const admin = true;//props.priveleges;

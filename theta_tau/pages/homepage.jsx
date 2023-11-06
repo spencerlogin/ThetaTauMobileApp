@@ -3,6 +3,7 @@ import React, { useState, useCallback } from "react";
 import Navbar from "../components/navbar";
 import Extra from "../components/extra";
 import MeetingCodeButton from "../components/meetingCode";
+import Polls from "./pollsPlaceholder";
 import { useNavigation } from '@react-navigation/native';
 
 const Homepage = () => {
@@ -10,6 +11,7 @@ const Homepage = () => {
   const [isDropped2, setIsDropped2] = useState(false);
   const [isDropped3, setIsDropped3] = useState(false);
   const [isDropped4, setIsDropped4] = useState(false);
+  const [meetingCode, setMeetingCode] = useState(0);
   const navigation = useNavigation();
 
 
@@ -95,8 +97,8 @@ const Homepage = () => {
               <Text style={styles.dropdownText}>“Whatsoever thy hand findeth to do, do it with thy might;...” ~Ecclesiastes 9:10</Text>
             </View>
           )}
-        <MeetingCodeButton/>
-      
+        <MeetingCodeButton updatePollsCode={setMeetingCode}/>
+        <Polls passedMeetingCode={meetingCode}/>
       <Extra />
       </ScrollView>
       <Navbar />
