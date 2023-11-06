@@ -1,10 +1,18 @@
-import { StyleSheet, View, Button, Text } from "react-native";
+import { StyleSheet, View, Button, Text, Alert } from "react-native";
 import React, { useState } from "react";
+import { A } from "@expo/html-elements";
 
-const MeetingCodeButton = () => {
-  const [meetingCode, setMeetingCode] = useState();
+const MeetingCodeButton = props => {
+  const [meetingCode, setMeetingCode] = useState(999999);
+  
+  const generateMeetingCode = () => {
+    const code = Math.floor(Math.random() * 1000000)
+    return code;
+  }
+
   const handleGenerateMeetingCode = () => {
     setMeetingCode(generateMeetingCode());
+    // props.updatePollsCode(meetingCode);
   }
   // hardcode as true for testing until sign-in code is done
   const admin = true;//props.priveleges;
@@ -18,16 +26,12 @@ const MeetingCodeButton = () => {
           color="#841584"
           accessibilityLabel="Button to Generate a Meeting Code"
         />
-        <Text>{meetingCode}</Text>
+        <Text>Meeting Code: {meetingCode}</Text>
       </>
       }
     </View>
   );
 };
-
-const generateMeetingCode = () => {
-  return Math.floor(Math.random() * 1000000);
-}
 
 const styles = StyleSheet.create({
   
