@@ -1,6 +1,5 @@
-import { StyleSheet, View, Button, Text, Alert } from "react-native";
+import { StyleSheet, View, Button, Text} from "react-native";
 import React, { useState } from "react";
-import { A } from "@expo/html-elements";
 
 const MeetingCodeButton = props => {
   const [meetingCode, setMeetingCode] = useState(999999);
@@ -11,9 +10,9 @@ const MeetingCodeButton = props => {
   }
 
   const handleGenerateMeetingCode = () => {
-    const temp = generateMeetingCode();
-    setMeetingCode(temp);
-    props.updatePollsCode(temp);
+    const code = generateMeetingCode();
+    setMeetingCode(code);
+    props.updatePollsCode(code);
   }
   // hardcode as true for testing until sign-in code is done
   const admin = true;//props.priveleges;
