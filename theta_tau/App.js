@@ -9,8 +9,6 @@ import Pillars from "./pages/pillars.jsx";
 import EasterEgg from "./pages/easterEgg.jsx";
 import MeetingCode from "./components/meetingCode.jsx";
 
-
-
 const Stack = createNativeStackNavigator();
 
 export default function App() 
