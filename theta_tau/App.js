@@ -7,8 +7,7 @@ import Calender from "./pages/calender.jsx";
 import BrotherPage from "./pages/brotherPage.jsx";
 import Pillars from "./pages/pillars.jsx";
 import EasterEgg from "./pages/easterEgg.jsx";
-
-
+import MeetingCode from "./components/meetingCode.jsx";
 
 const Stack = createNativeStackNavigator();
 

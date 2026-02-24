@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View, Image, Pressable, Dimensions, TouchableOpacity, ScrollView} from "react-native";
+import { StyleSheet, Text, View, Image, Pressable, Dimensions, TouchableOpacity, ScrollView, TextInput, Button } from "react-native";
 import React, { useState, useCallback } from "react";
 import Navbar from "../components/navbar";
-import Extra from "../components/extra"
+import Extra from "../components/extra";
+import MeetingCodeButton from "../components/meetingCode";
+import Polls from "./pollsPlaceholder";
 import { useNavigation } from '@react-navigation/native';
 
 const Homepage = () => {
@@ -9,8 +11,21 @@ const Homepage = () => {
   const [isDropped2, setIsDropped2] = useState(false);
   const [isDropped3, setIsDropped3] = useState(false);
   const [isDropped4, setIsDropped4] = useState(false);
+  const [meetingCode, setMeetingCode] = useState(0);
+  const [userInputedCode, setUserInputedCode] = useState(0);
   const navigation = useNavigation();
+  
+  const generateMeetingCode = () => {
+    const code = Math.floor(Math.random() * 1000000)
+    return code;
+  }
 
+  const handleGenerateMeetingCode = () => {
+    const code = generateMeetingCode();
+    setMeetingCode(code);
+  }
+  // hardcode as true for testing until sign-in code is done
+  const admin = true;//props.priveleges;
 
   const handleArrowPress1 = () => {
     setIsDropped1(!isDropped1)
@@ -43,9 +58,6 @@ const Homepage = () => {
         <Text style={styles.purpose}>
           The purpose of Theta Tau is to develop and maintain a high standard of professional interest among its members, and to unite them in a strong bond of fraternal fellowship.
         </Text>
-
-
-
 
         <TouchableOpacity onPress={() => handleArrowPress1()}>
           <View style={styles.dropdownRow}>
@@ -94,7 +106,38 @@ const Homepage = () => {
               <Text style={styles.dropdownText}>“Whatsoever thy hand findeth to do, do it with thy might;...” ~Ecclesiastes 9:10</Text>
             </View>
           )}
-      
+        {admin && 
+          <>
+            <Button
+              onPress={handleGenerateMeetingCode}
+              title="Generate Meeting Code"
+              color="#841584"
+              accessibilityLabel="Button to Generate a Meeting Code"
+            />
+            <Text>Meeting Code: {meetingCode}</Text>
+          </>
+        }
+        <TextInput
+          placeholder="enter meeting code"
+          keyboardType="numbers-and-punctuation"
+          onChangeText={text => setUserInputedCode(parseInt(text))}
+        />
+
+        {(userInputedCode == meetingCode) && 
+          <>
+            <Text>Placeholder Question</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Placeholder Answer"
+            />
+          </>
+        }
+        {/* <Polls passedMeetingCode={meetingCode}/> */}
+        //
+      <Extra />
+      <Extra />
+      <Extra />
+      <Extra />
       <Extra />
       </ScrollView>
       <Navbar />
